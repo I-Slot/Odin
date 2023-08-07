@@ -50,3 +50,111 @@ var message = 'Hello';
 The var keyword is almost the same as let. It also declares a variable, but in a slightly different, “old-school” way.
 ////////////////////////////
 */
+
+var varMessage = "Var can also to used to declare a variables.";
+/*
+// Var declaration
+1- “var” has no block scope
+Variables, declared with var, are either function-scoped or global-scoped.
+ They are visible through blocks.
+*/
+
+if (true) {
+  var test = true;
+}
+
+// alert(test);
+
+if (true) {
+  let test = true;
+}
+
+// alert(test);
+
+/*
+2 - “var” tolerates re-declarations
+ */
+// let
+// let userNameLet = "Ismail";
+// let userNameLet = "Muhammad";
+
+// Var
+var userNameVar = "Ismail";
+var userNameVar = "Muhammad";
+
+console.log(userNameVar);
+
+/*
+3- “var” variables can be declared below their use
+*/
+
+console.log(varBefore);
+var varBefore = " Var can be used before declaration";
+
+/*
+///////////////////////////////////////////
+A real-life analogy
+We can easily grasp the concept of a “variable” if we imagine it as a “box” for data, with a uniquely-named sticker on it.
+
+For instance, the variable message can be imagined as a box labeled "message" with the value "Hello!" in it:
+///////////////////////////////////////////////////////
+ */
+
+let messageL;
+
+messageL = "Hello!";
+
+messageL = "World!"; // value changed
+
+alert(messageL);
+
+// Variables Naming
+/*
+// There are two limitations on variable names in JavaScript:
+  1 - The name must contain only letters, digits, or the symbols $ and _.
+  2 - The first character must not be a digit.
+
+    Examples of valid names:
+
+    let userName;
+    let test123;
+
+    **When the name contains multiple words, camelCase is commonly used. That is: words go one after another,
+     each word except first starting with a capital letter: myVeryLongName.
+
+     **What’s interesting – the dollar sign '$' and the underscore '_' can also be used in names.
+      They are regular symbols, just like letters, without any special meaning.
+
+      let $ = 1; // declared a variable with the name "$"
+      let _ = 2; // and now a variable with the name "_"
+
+ */
+
+// Case matters: **Variables named apple and APPLE are two different variables.
+// Non-Latin letters are allowed, but not recommended
+/*
+        let имя = '...';
+        let 我 = '...';
+  */
+
+// Reserved names
+
+/*
+There is a list of reserved words, which cannot be used as variable names because 
+they are used by the language itself.
+
+For example: let, class, return, and function are reserved.
+  */
+
+//An assignment without use strict
+/*
+Normally, we need to define a variable before using it. But in the old times, 
+it was technically possible to create a variable by a mere assignment of the value without using let.
+ This still works now if we don’t put use strict in our scripts to maintain compatibility with old scripts.
+ */
+
+//Constants : To declare a constant (unchanging) variable, use const instead of let
+
+//Conditionals
+
+// Comparisons
